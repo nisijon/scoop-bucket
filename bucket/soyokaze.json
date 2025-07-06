@@ -1,0 +1,18 @@
+{
+    "##": "TODO: add properties checkver, autoupdate and hash",
+    "version": "0.42.0",
+    "description": "A keyboard-driven launcher application inspired by bluewind.",
+    "homepage": "https://github.com/ampmmn/Soyokaze",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "bin": ["soyokaze.exe"],
+            "pre_install": [
+                "Move-Item -Path \"$dir\\Soyokaze-Portable-$version-x86_64\\*\" -Destination \"$dir\"",
+                "Remove-Item -Path \"$dir\\Soyokaze-Portable-$version-x86_64\" -Force"
+            ],
+            "url": "https://github.com/ampmmn/Soyokaze/releases/download/0.42.0/Soyokaze-Portable-0.42.0-x86_64.7z"
+        }
+    },
+    "persist": ["profile"]
+}
