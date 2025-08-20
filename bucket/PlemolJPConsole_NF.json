@@ -1,6 +1,6 @@
 {
     "version": "3.0.0",
-    "description": "PlemolJP is a Japanese programming font created by combining IBM Plex Mono and IBM Plex Sans JP.",
+    "description": "PlemolJPConsole_NF is a Japanese programming font created by combining IBM Plex Mono and IBM Plex Sans JP, that embeds the Nerd Font set.",
     "homepage": "https://github.com/yuru7/PlemolJP",
     "license": "OFL-1.1",
     "hash": "887e2d0db714d41ac26ab924bdd3a172b922f57b2b480af01e0147180eac3d80",
