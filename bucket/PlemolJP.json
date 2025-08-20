@@ -1,0 +1,34 @@
+{
+    "version": "3.0.0",
+    "description": "PlemolJP is a Japanese programming font created by combining IBM Plex Mono and IBM Plex Sans JP.",
+    "homepage": "https://github.com/yuru7/PlemolJP",
+    "license": "OFL-1.1",
+    "hash": "757de5ab50fe4f44bb3a3bffcbffec24f18af33dca9bd4e5d7949158fa84533e",
+    "autoupdate": {
+        "url": "https://github.com/yuru7/PlemolJP/releases/download/v$version/PlemolJP_v$version.zip"
+    },
+    "checkver": "github",
+    "installer": {
+        "script": [
+            "Get-ChildItem $dir\\PlemolJP -filter '*.ttf' | ForEach-Object {",
+            "   $fontDir = \"$env:LocalAppData\\Microsoft\\Windows\\Fonts\"",
+            "   New-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name -Value \"$fontDir\\$($_.Name)\" -Force | Out-Null",
+            "   Copy-Item $_.Fullname -Destination \"$fontDir\"",
+            "}"
+        ]
+    },
+    "pre_install": [
+        "Move-Item -Path \"$dir\\PlemolJP_v$version\\*\" -Destination \"$dir\"",
+        "Remove-Item -Path \"$dir\\PlemolJP_v$version\" -Force"
+    ],
+    "uninstaller": {
+        "script": [
+            "Get-ChildItem $dir\\PlemolJP -filter '*.ttf' | ForEach-Object {",
+            "   $fontDir = \"$env:LocalAppData\\Microsoft\\Windows\\Fonts\"",
+            "   Remove-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name -Force -ErrorAction SilentlyContinue",
+            "   Remove-Item \"$fontDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}"
+        ]
+    },
+    "url": "https://github.com/yuru7/PlemolJP/releases/download/v3.0.0/PlemolJP_v3.0.0.zip"
+}
