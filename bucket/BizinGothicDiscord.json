@@ -1,0 +1,34 @@
+{
+    "version": "0.0.4",
+    "description": "BizinGothicDiscord is a Japanese programming font inspired by Ricty and created by combining BIZ UDGothic and Inconsolata.",
+    "homepage": "https://github.com/yuru7/bizin-gothic",
+    "license": "OFL-1.1",
+    "hash": "54e02ce9fe90073da7b07f59cbee87dac097271bec85c28bfd61283653849c66",
+    "autoupdate": {
+        "url": "https://github.com/yuru7/bizin-gothic/releases/download/v$version/BizinGothicDiscord_v$version.zip"
+    },
+    "checkver": "github",
+    "installer": {
+        "script": [
+            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
+            "   $fontDir = \"$env:LocalAppData\\Microsoft\\Windows\\Fonts\"",
+            "   New-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name -Value \"$fontDir\\$($_.Name)\" -Force | Out-Null",
+            "   Copy-Item $_.Fullname -Destination \"$fontDir\"",
+            "}"
+        ]
+    },
+    "pre_install": [
+        "Move-Item -Path \"$dir\\BizinGothicDiscord_v$version\\*\" -Destination \"$dir\"",
+        "Remove-Item -Path \"$dir\\BizinGothicDiscord_v$version\" -Force"
+    ],
+    "uninstaller": {
+        "script": [
+            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
+            "   $fontDir = \"$env:LocalAppData\\Microsoft\\Windows\\Fonts\"",
+            "   Remove-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name -Force -ErrorAction SilentlyContinue",
+            "   Remove-Item \"$fontDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}"
+        ]
+    },
+    "url": "https://github.com/yuru7/bizin-gothic/releases/download/v0.0.4/BizinGothicDiscord_v0.0.4.zip"
+}
