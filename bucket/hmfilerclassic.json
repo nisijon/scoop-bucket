@@ -12,6 +12,7 @@
                 "919d3379a842172992fd0ec27be68effd36bcd55f6d81a5e601606dd4124bf4b"
             ],
             "pre_install": [
+                "if (-not (Test-Path \"$persist_dir\\HmFilerClassic.ini\")) { New-Item \"$dir\\HmFilerClassic.ini\" | Out-Null }",
                 "Remove-Item -Path @(\"$dir\\HmRegIni.chm\", \"$dir\\HmRegIni.dll\", \"$dir\\HmRegIniInst-Filer.exe\")",
                 "Rename-Item \"$dir\\HmRegIni64.dll\" \"$dir\\HmRegIni.dll\""
             ],
