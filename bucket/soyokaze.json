@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "bin": "soyokaze.exe",
-            "hash": "b549c126d9b1a4babd832b0487a3517adef450d1307e730f715b45b21e06e364",
+            "hash": "6309450d1d342cd1af0dca7d148c19226ed8288b531547d426842c4f602d231d",
             "pre_install": [
                 "if (Get-Process soyokaze -ErrorAction SilentlyContinue) { soyokaze /runcommand=exit }",
                 "Move-Item -Path \"$dir\\Soyokaze-Portable-$version-x86_64\\*\" -Destination \"$dir\"",
