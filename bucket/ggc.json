@@ -1,0 +1,21 @@
+{
+    "version": "7.0.4",
+    "description": "A Go Git CLI.",
+    "homepage": "https://github.com/bmf-san/ggc",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "bin": "ggc.exe",
+            "hash": "61015fd118084af8db1d9f90976609573e8222c4f6f4a919a7fd8925b3aa78c3",
+            "url": "https://github.com/bmf-san/ggc/releases/download/v7.0.4/ggc_7.0.4_windows_amd64.tar.gz"
+        }
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/bmf-san/ggc/releases/download/v$version/ggc_v$version_windows_amd64.tar.gz"
+            }
+        }
+    },
+    "checkver": "github"
+}
