@@ -1,0 +1,25 @@
+{
+    "version": "0.27.1",
+    "description": "An Excel file comparison tool that can automatically detect row and column gaps.",
+    "homepage": "https://github.com/nmby/hogandiff4",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "bin": "hogandiff.exe",
+            "hash": "e1390f7b40dbd742b68a87e9a5d56a6a4c3eefc91e67ada4690a3a9fb574c325",
+            "url": "https://github.com/nmby/hogandiff4/releases/download/v0.27.1/hogandiff-0.27.1-win-x64.zip"
+        }
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/nmby/hogandiff4/releases/download/v$version/hogandiff-$version-win-x64.zip"
+            }
+        }
+    },
+    "checkver": "github",
+    "pre_install": [
+        "Move-Item -Path \"$dir\\hogandiff-$version-win-x64\\*\" -Destination \"$dir\"",
+        "Remove-Item -Path \"$dir\\hogandiff-$version-win-x64\" -Force"
+    ]
+}
