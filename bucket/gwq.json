@@ -1,13 +1,13 @@
 {
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "A CLI tool for efficiently managing Git worktrees.",
     "homepage": "https://github.com/d-kuro/gwq",
     "license": " Apache-2.0",
     "architecture": {
         "64bit": {
             "bin": "gwq.exe",
-            "hash": "0f1fd844b19b3b67ebe0a4e2917aa0c29f3c997cc7beb81ea33dfd6c476620c0",
-            "url": "https://github.com/d-kuro/gwq/releases/download/v0.0.6/gwq_Windows_x86_64.zip"
+            "hash": "7a3b80861aa9b68c0b4d5da9d7e6357bf26f09f8c0be3266245e9eeeabdc6ee0",
+            "url": "https://github.com/d-kuro/gwq/releases/download/v0.0.7/gwq_Windows_x86_64.zip"
         }
     },
     "autoupdate": {
