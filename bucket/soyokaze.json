@@ -1,18 +1,18 @@
 {
-    "version": "0.52.0",
+    "version": "0.52.1",
     "description": "A keyboard-driven launcher application inspired by bluewind.",
     "homepage": "https://github.com/ampmmn/Soyokaze",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "bin": "soyokaze.exe",
-            "hash": "ac0a5d6de66419964660de6a990138900d7aad8e8808d32cc85bea877c30693a",
+            "hash": "d645539bfdda80f8612dcb902bdafd57244f81ed764d84ae14bd1197fc7274f3",
             "pre_install": [
                 "if (Get-Process soyokaze -ErrorAction SilentlyContinue) { soyokaze /runcommand=exit }",
                 "Move-Item -Path \"$dir\\Soyokaze-Portable-$version-x86_64\\*\" -Destination \"$dir\"",
                 "Remove-Item -Path \"$dir\\Soyokaze-Portable-$version-x86_64\" -Force"
             ],
-            "url": "https://github.com/ampmmn/Soyokaze/releases/download/0.52.0/Soyokaze-Portable-0.52.0-x86_64.zip"
+            "url": "https://github.com/ampmmn/Soyokaze/releases/download/0.52.1/Soyokaze-Portable-0.52.1-x86_64.zip"
         }
     },
     "autoupdate": {
