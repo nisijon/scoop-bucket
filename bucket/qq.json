@@ -7,13 +7,13 @@
         "64bit": {
             "bin": "qq.exe",
             "hash": "b121f0657dc95f830333fb4d2ee8c192494f4d24831131f3ce5cca5d2f9b6ef2",
-            "url": "https://github.com/JFryy/qq//releases/download/v0.3.3/qq-v0.3.3-windows-amd64.zip"
+            "url": "https://github.com/JFryy/qq/releases/download/v0.3.3/qq-v0.3.3-windows-amd64.zip"
         }
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/JFryy/qq//releases/download/v$version/qq-v$version-windows-amd64.zip"
+                "url": "https://github.com/JFryy/qq/releases/download/v$version/qq-v$version-windows-amd64.zip"
             }
         }
     },
