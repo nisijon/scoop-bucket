@@ -1,13 +1,13 @@
 {
-    "version": "0.3.3",
+    "version": "0.3.4",
     "description": "An interoperable configuration format transcoder with jq query syntax powered by gojq.",
     "homepage": "https://github.com/JFryy/qq",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "bin": "qq.exe",
-            "hash": "b121f0657dc95f830333fb4d2ee8c192494f4d24831131f3ce5cca5d2f9b6ef2",
-            "url": "https://github.com/JFryy/qq/releases/download/v0.3.3/qq-v0.3.3-windows-amd64.zip"
+            "hash": "1716f713f5bf9639525d88a1d9aa87fff50da6255c61e6c56bf4676b81edc651",
+            "url": "https://github.com/JFryy/qq/releases/download/v0.3.4/qq-v0.3.4-windows-amd64.zip"
         }
     },
     "autoupdate": {
